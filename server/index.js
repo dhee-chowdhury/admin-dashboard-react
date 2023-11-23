@@ -11,6 +11,11 @@ const generalRoutes = require("./routes/general");
 const managementRoutes = require("./routes/management");
 const salesRoutes = require("./routes/sales");
 
+// Data imports for the first time
+// const Product = require("./models/productModel");
+// const ProductStat = require("./models/productStatModel");
+// const { dataProduct, dataProductStat } = require("./data/data");
+
 // initializing the app
 const app = express();
 
@@ -43,6 +48,8 @@ mongoose
     app.listen(PORT, () => {
       console.log(`listening on port: ${PORT}`);
     });
+    // Product.insertMany(dataProduct);
+    // ProductStat.insertMany(dataProductStat);
     console.log("connected to db successfully");
   })
   .catch((err) => {

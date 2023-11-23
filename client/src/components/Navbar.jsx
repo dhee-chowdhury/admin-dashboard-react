@@ -32,7 +32,7 @@ const Navbar = ({ user, isSidebarOpen, setIsSidebarOpen }) => {
   const isOpen = Boolean(anchorEl);
 
   const handleClick = (e) => setAnchorEl(e.currentTarget);
-  const handleClose = (e) => setAnchorEl(null);
+  const handleClose = () => setAnchorEl(null);
 
   return (
     <AppBar
