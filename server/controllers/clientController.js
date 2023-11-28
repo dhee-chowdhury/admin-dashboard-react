@@ -1,6 +1,6 @@
 const Product = require("../models/productModel");
 const ProductStat = require("../models/productStatModel");
-
+const User = require("../models/userModel");
 const getProducts = async (req, res) => {
   try {
     const products = await Product.find();
@@ -9,7 +9,6 @@ const getProducts = async (req, res) => {
         const stat = await ProductStat.find({
           productId: product._id,
         });
-        console.log(stat);
         return {
           ...product._doc,
           stat,
@@ -23,4 +22,13 @@ const getProducts = async (req, res) => {
   }
 };
 
-module.exports = getProducts;
+const getCustomers = async (req, res) => {
+  try {
+    const customers = await User.find({ role: "user" }).select("-password");
+    res.status(200).json(customers);
+  } catch (error) {
+    res.status(404).json({ message: error.message });
+  }
+};
+
+module.exports = { getProducts, getCustomers };
