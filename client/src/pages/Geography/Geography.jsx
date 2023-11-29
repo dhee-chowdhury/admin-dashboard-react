@@ -6,12 +6,14 @@ import { geoData } from "../../state/geoData";
 
 const Geography = () => {
   const theme = useTheme();
+  // get data
   const { data, isLoading } = useGetGeographyQuery();
-  console.log(data);
-
+  // return loading if in loading state
   if (isLoading) {
     return <div>Loading...</div>;
   }
+
+  // if data is available
   return (
     <Box m="1.5rem 2.5rem">
       <Header title="GEOGRAPHY" subtitle="Find where your users are located" />
@@ -96,7 +98,7 @@ const Geography = () => {
             ]}
           />
         ) : (
-          <>Loading...</>
+          <>something went wrong</>
         )}
       </Box>
     </Box>

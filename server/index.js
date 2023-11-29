@@ -14,9 +14,16 @@ const salesRoutes = require("./routes/sales");
 // Data imports for the first time
 // const Product = require("./models/productModel");
 // const ProductStat = require("./models/productStatModel");
-// const { dataProduct, dataProductStat, dataTransaction, dataUser } = require("./data/data");
+// const {
+//   dataProduct,
+//   dataProductStat,
+//   dataTransaction,
+//   dataUser,
+//   dataOverallStat,
+// } = require("./data/data");
 // const Transaction = require("./models/transactionModel");
 // const User = require("./models/userModel");
+// const OverallStat = require("./models/overallStatModel");
 
 // initializing the app
 const app = express();
@@ -54,6 +61,7 @@ mongoose
     // ProductStat.insertMany(dataProductStat);
     // Transaction.insertMany(dataTransaction);
     // User.insertMany(dataUser);
+    // OverallStat.insertMany(dataOverallStat);
     console.log("connected to db successfully");
   })
   .catch((err) => {
