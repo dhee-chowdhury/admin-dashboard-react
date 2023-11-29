@@ -1,4 +1,3 @@
-import React from "react";
 import { Box, useTheme } from "@mui/material";
 
 import { useGetCustomersQuery } from "../../state/api";
@@ -25,15 +24,14 @@ const Customers = () => {
       headerName: "Email",
       flex: 1,
     },
-    // fix phoneNumber: it's not added in db
-    // {
-    //   field: "phoneNumber",
-    //   headerName: "Phone Number",
-    //   flex: 0.5,
-    //   renderCell: (params) => {
-    //     return params.value.replace(/^(\d{3})(\d{3})(\d{4})/, "($1)$2-$3");
-    //   },
-    // },
+    {
+      field: "phoneNumber",
+      headerName: "Phone Number",
+      flex: 0.5,
+      renderCell: (params) => {
+        return params.value.replace(/^(\d{3})(\d{3})(\d{4})/, "($1) $2-$3");
+      },
+    },
     {
       field: "country",
       headerName: "Country",

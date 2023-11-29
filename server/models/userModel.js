@@ -25,6 +25,7 @@ const userSchema = new Schema(
     state: String,
     country: String,
     occupation: String,
+    phoneNumber: String,
     transactions: Array,
     role: {
       type: String,
