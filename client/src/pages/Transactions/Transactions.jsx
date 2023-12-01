@@ -26,7 +26,6 @@ const Transactions = () => {
     sort: JSON.stringify(sort),
     search,
   });
-  console.log(data);
 
   // columns for data grid
   const columns = [

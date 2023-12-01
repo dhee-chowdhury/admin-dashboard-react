@@ -8,3 +8,23 @@ body,
   width: 100%;
   font-family: "Poppins", sans-serif;
 }
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #a2aad5;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #3b3d48;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+/* ::-webkit-scrollbar-track:hover {
+  background: #21295c;
+} */

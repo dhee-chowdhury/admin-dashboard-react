@@ -52,7 +52,6 @@ const Daily = () => {
     return [formattedData];
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [data, startDate, endDate]);
-  console.log(formattedData);
 
   return (
     <Box m="1.5rem 2.5rem">
